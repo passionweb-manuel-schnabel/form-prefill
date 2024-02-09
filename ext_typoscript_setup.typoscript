@@ -1,0 +1,7 @@
+plugin.tx_form.settings.yamlConfigurations {
+	1704442020 = EXT:form_prefill/Configuration/Yaml/BaseSetup.yaml
+}
+module.tx_form.settings.yamlConfigurations {
+	1704442020 = EXT:form_prefill/Configuration/Yaml/BaseSetup.yaml
+}
+

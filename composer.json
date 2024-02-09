@@ -1,0 +1,31 @@
+{
+    "name": "passionweb/form-prefill",
+    "type": "typo3-cms-extension",
+    "description": "Shows the usage of the hook \"afterBuildingFinished\" of EXT:form, for example to prefill forms. (TYPO3 CMS)",
+    "version": "1.0.0",
+    "homepage": "https://www.passionweb.de",
+    "authors": [
+        {
+            "name": "Manuel Schnabel",
+            "role": "Developer"
+        }
+    ],
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "typo3/cms-core": "^12.4",
+        "typo3/cms-form": "^12.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Passionweb\\FormPrefill\\": "Classes"
+        }
+    },
+    "replace": {
+        "typo3-ter/form-prefill": "self.version"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "form_prefill"
+        }
+    }
+}

@@ -1,0 +1,66 @@
+
+renderingOptions:
+  submitButtonLabel: Submit
+type: Form
+identifier: form-prefill
+label: Form prefill
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: Form prefill example
+      recipients:
+        'service@passionweb.de': 'PassionWeb'
+      senderAddress: 'service@passionweb.de'
+      senderName: '{firstname} {lastname}'
+      replyToRecipients:
+        '{email}': '{firstname} {lastname}'
+      addHtmlPart: true
+      attachUploads: false
+      translation:
+        language: Default
+      title: 'Form prefill example'
+    identifier: EmailToReceiver
+  -
+    options:
+      pageUid: '1'
+      additionalParameters: ''
+      fragment: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label:
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: firstname
+        label: Firstname
+      -
+        defaultValue: ''
+        type: Text
+        identifier: lastname
+        label: Lastname
+      -
+        defaultValue: ''
+        type: Email
+        identifier: email
+        label: 'Email address'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: message
+        label: Message
